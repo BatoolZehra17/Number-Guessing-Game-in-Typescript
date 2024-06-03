@@ -2,7 +2,7 @@ import inquirer from 'inquirer';
 type anstype ={
     userguess :number
 }
-let systemgenertedNo = Math.floor(Math.random()*10);
+let systemgeneratedNo = Math.floor(Math.random()*10);
 const answer = await inquirer.prompt([
 
     {
@@ -12,14 +12,14 @@ const answer = await inquirer.prompt([
     }
 ])
 const {userguess}:number = answer;
-console.log(userguess,"userguess" , systemgenertedNo ,"sYs")
+console.log(userguess,"userguess" , systemgeneratedNo ,"sYs")
 if(userguess === systemgenertedNo){
     console.log("Yay!! your answer is correct\n You win")
 }
 else{
     console.log("Better luck next time")
 }
-    if(userguess<systemgenertedNo){
+    if(userguess<systemgeneratedNo){
         console.log("Hint: Number is higher")
     }
     else{
